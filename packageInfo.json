@@ -1,0 +1,20 @@
+{
+  "name": "appforgci19openmrs",
+  "version": "0.1.0",
+  "description": "This task is part of GCI19 & second React Task",
+  "repository": {
+    "url": "https://github.com/mzs21/Server-for-React-App-2"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "read-package-json": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
