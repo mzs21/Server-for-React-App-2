@@ -8,9 +8,12 @@ const app = express();
 const PORT = 3000;
 
 var jsonFile = require('./packageInfo.json');
+
+jsonFile = { 'serverName': jsonFile.name, 'serverVersion': jsonFile.version };
+
 // create a route for the app
 app.get('/info', (req, res) => {
-    res.json({ 'serverName': jsonFile.name, 'serverVersion': jsonFile.version})
+  res.json(jsonFile);
 });
 
 // make the server listen to requests
