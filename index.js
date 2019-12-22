@@ -7,13 +7,16 @@ const app = express();
 // server configuration
 const PORT = 3000;
 
+var jsonFile = require('./packageInfo.json');
+
+jsonFile = { 'serverName': jsonFile.name, 'serverVersion': jsonFile.version };
 
 // create a route for the app
-app.get('/', (req, res) => {
-    res.json()
+app.get('/info', (req, res) => {
+  res.json(jsonFile);
 });
 
 // make the server listen to requests
 app.listen(PORT, () => {
-  console.log(`Server running at: http://localhost:${PORT});
+  console.log(`Server running at: http://localhost:${PORT}/info`);
 });
